@@ -1,0 +1,27 @@
+<main class='container'>
+
+  <div class='row'>
+
+    {{#each albums}}
+
+      <div class='card' style='width: 18rem;'>
+
+        {{#if images.length}}
+          <img
+            src='{{images.0.url}}'
+            alt='{{name}}'
+            class='card-img-top'
+            alt='album'
+          />
+        {{/if}}
+        <div class='card-body'>
+          <h5 class='card-title'>{{name}}</h5>
+          <a href='/album/{{id}}' class='btn btn-primary'>View Tracks</a>
+        </div>
+      </div>
+
+    {{/each}}
+
+  </div>
+
+</main>
